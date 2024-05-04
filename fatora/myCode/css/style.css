@@ -1,0 +1,1008 @@
+/* تعريف المتغيرات */
+:root {
+    --bck-body: #f6f6f6;
+    --primary-color: #3d76d8; /* اللون الأساسي */
+    --text-color: #474747; /* لون النص */
+    --background-color: #f0f0f0; /* لون الخلفية */
+    --highlight-color: #d3e3eb; /* لون التحديد */
+    --fff-color: white;
+    --sha-do: #00000009;
+    --purchase: #03b103; 
+    --not_not_purchase: #EF233C;
+    --radius: .5rem;
+    --radius2: 100%;
+    --weight: 600;
+    --size: 13px;
+    /*this left .remove_txt_in */
+    --width: 100%;
+    
+}
+/* إعدادات عامة */
+* {
+    margin: 0;
+    left: 0;
+    box-sizing: border-box;
+    font-family: system-ui;
+    list-style: none;
+    letter-spacing: .8px;
+    word-spacing: .8px;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    scroll-behavior: smooth;
+}
+
+html,body{
+    background: var(--bck-body);
+    height: 100vh;
+    animation: optic .6s ease-in-out;
+    scroll-behavior: smooth;
+}
+body{
+    overflow-y: scroll;
+}
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: var(--sha-do);
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--highlight-color); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    opacity: .7;
+  }
+::selection{
+   display: none;
+}
+.ipt_txt::selection{
+    background-color: var(--primary-color);
+    color: var(--fff-color);
+}
+/* زر  */
+.my_btn,.my_btnTop {
+    animation: optic .6s ease-in-out;
+    width: var(--width);
+    height: 43px;
+    padding: 10px 15px;
+    color: var(--fff-color);
+    transition: .2s linear, color .2s, background-color 0s;
+    outline: 3px solid transparent;
+    outline-offset: .2em;
+    background-color: var(--primary-color);
+    border: solid 3px var(--bck-body);
+    border-radius: var(--radius);
+    font-weight: var(--weight);
+    font-size: var(--size);
+}
+
+/* تأثيرات التحويل والتحديد عند التحريك بالفأرة */
+/* زر  */
+.my_btn:hover,.my_btnTop:hover{
+    outline-color: var(--primary-color);
+    outline-offset: .05em;
+}
+/* تعيين العرض والارتفاع ومحاذاة العناصر للعناصر التالية */
+.header,
+.shHeader,
+.text_lng,
+.liHeader,
+.myBrnd,
+tr,
+#boxVirifi,
+.spanVirifi,
+.shHeader,
+.box_inpt2,
+.boxImg,
+.boxImg,
+.boxtotalFinalFatora,
+.BxtotalFinalFatora,
+.box_img_click {
+    display: flex;
+    align-items: center;
+}
+
+/* تعيين عرض العناصر ومحاذاة المحتوى للزر والأزرار */
+.barHeader,
+.my_btn,
+.lnt2,
+.icnTotalFinalFatora{
+    display: grid;
+    place-content: center;
+}
+
+/* تعيين عرض العناصر ومحاذاة المحتوى للأقسام والزر */
+.section_kona,
+#addForm,
+.onlodBtn {
+    display: grid;
+    align-items: center;
+}
+
+/* تعيين موضع نسبي للعناصر */
+.box_inpt,
+.my_btn,
+.onlodBtn {
+    position: relative;
+}
+
+/* إزالة حدود وتحديدات الإدخالات والأزرار */
+button,
+input {
+    outline: none;
+    border: none;
+}
+
+/* part 1 */
+/* تنسيق العناصر في الهيدر والشاشة */
+.header,
+.shHeader {
+    width: 100%;
+    padding: 15px 20px;
+    height: 65px;
+    justify-content: space-between;
+    background-color: var(--bck-body);
+    position: fixed;
+    z-index: 99;
+}
+
+/* تنسيق قائمة التنقل */
+.nav {
+    background-color: var(--bck-body);
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    z-index: 888;
+    border: 4px solid var(--sha-do);
+    margin-left: -226px;
+    border-radius: var(--radius);
+}
+
+.active_nav {
+    margin-left: 0px;
+}
+
+/* تنسيق العناصر في الهيدر */
+.barHeader {
+    position: relative;
+    left: -5px;
+    z-index: 999;
+    width: 38px;
+    height: 38px;
+    border-radius: var(--width);
+    color: var(--text-color);
+    background-color: transparent;
+    font-size: 16px;
+    
+}
+/* تغيير لون الرمز عند التحويم عليه */
+.barHeader:hover{
+    background-color: var(--sha-do);
+}
+
+/* تحديد الأسلوب النشط للرمز */
+.active_bar{
+    left: 220px;  
+}
+
+/* تنسيق العناصر داخل القائمة */
+.liHeader i {
+    color: var(--text-color);
+}
+
+/* تخصيص القائمة */
+ul {
+    background-color: var(--bck-body);
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 10px;
+    border-top: 2px solid var(--sha-do);
+}
+
+ /* تخصيص عناصر القائمة */
+.liHeader,
+.myBrnd {
+    padding:13px 15px;
+    position: relative;
+    color: var(--text-color);
+    font-size: var(--size);
+    font-weight: var(--weight);
+    gap: 35px;
+    justify-content: start;
+    transform: translateY(15px);
+    border-radius: var(--radius);
+}
+
+.myBrnd img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    opacity: .8;
+}
+.myBrnd{
+    padding: 0 ;
+    gap: 0;
+}
+
+/* تخصيص التحويل عند التحويم على عنصر القائمة */
+.liHeader:hover,
+.active,
+.active_box_lng {
+    background-color: var(--sha-do);
+}
+
+/* تخصيص العلامة التجارية */
+.myBrnd {
+    transform: translateY(-6px);
+    font-size: 15px;
+    gap: 20px;
+}
+
+
+/* تنسيق اللغات */
+.box_lng {
+    display: none;
+}
+
+/* تخصيص العناصر داخل القائمة المنسدلة */
+.text_lng {
+    border-bottom: 1px solid var(--sha-do);
+    padding:13px 15px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* تخصيص الحدود بين العناصر داخل القائمة المنسدلة */
+.text_lng:nth-child(2) {
+    border: none;
+}
+.text_lng:hover{
+    opacity: .7;
+}
+/* تخصيص الرموز داخل القائمة المنسدلة */
+.text_lng i {
+    color: var(--primary-color);
+}
+
+/* تخصيص الأسلوب النشط للقائمة المنسدلة */
+.active_box_lng {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 0;
+    gap: 0;
+    animation: optic .6s ease-in-out;
+}
+
+/* تدوير السهم للأسفل عند تحديد عنصر اللغة */
+.active_downLng {
+    transform: rotate(180deg);
+}
+
+
+/* part 2 */
+
+/* أنماط القوائم والأشكال */
+.section_kona,
+#addForm {
+    gap: 10px;
+    padding: 15px;
+}
+.section_kona{
+    transform: translateY(80px);
+    
+}
+/* نموذج الإضافة */
+#addForm {
+    padding: 0px;
+    width: 100%;
+}
+
+/* حقل الإدخال */
+.ipt_txt{
+    border: 2px solid var(--text-color);
+    border-radius: var(--radius);
+    width: var(--width);
+    font-weight: var(--weight);
+    padding: 10px 35px 10px 12px;
+    background-color: var(--bck-body);
+    cursor: auto;
+}
+.ipt_txt::placeholder{
+    font-size: var(--size);
+    font-weight: var(--weight);
+}
+/* تأثيرات التحويل والتحديد عند التحريك بالفأرة */
+.ipt_txt:focus,
+/* عنصر نشط */.active_br_inpt{
+    border: 2px solid var(--primary-color);
+
+}
+/* اسم input */
+.label_ipt {
+    position: absolute;
+    color: var(--text-color);
+    left: 10px;
+    top: 11px;
+    font-weight: var(--weight);
+    font-size: var(--size);
+    cursor: auto;
+}
+/* تأثيرات التحويل عند النقر */
+.ipt_txt:focus + .label_ipt,
+/* عنصر نشط */.active_remove_lbl {
+    top: -9px;
+    font-size: var(--size);
+    background-color: var(--bck-body);
+    padding: 0px 2px;
+    border-radius: var(--radius);
+    color: var(--primary-color);
+}
+
+/* زر حذف النص */
+.remove_txt_in {
+    display: none;
+    place-items: center;
+    position: absolute;
+    left: var(--width);
+    margin-left: -30px;
+    top: 11px;
+    border-radius: var(--radius2);
+    width: 20px;
+    height: 20px;
+}
+/* تأثيرات التحويل والتحديد عند التحريك بالفأرة */
+.remove_txt_in:hover {
+    background-color: var(--sha-do);
+}
+/* ايقوتة الحدف */
+.remove_txt_in i{
+    color: var(--text-color);
+    font-size: var(--size);
+}
+.chrRemove{
+    top: 9px;
+}
+
+/* part 3 */
+/* تخصيص جدول البيانات */
+
+.dataTable {
+    position: relative;
+    display: none;
+    width: var(--width);
+    padding: 5px;
+    border-radius: var(--radius);
+    border: 3px solid var(--sha-do); 
+}
+/* canvas */
+#tableCanvas{
+    border-radius: var(--radius);
+    display: none;
+}
+/* تخصيص الصفوف في الجدول */
+tr {
+    position: relative;
+    justify-content: center;
+    width: var(--width);
+    border-radius: var(--radius);
+    padding: 10px;
+    background-color: var(--background-color);
+}
+tr:hover {
+    background-color: var(--sha-do);
+}
+
+/* عناصر الجدول ذات العنوان */
+#dataTable .tr_titer {
+    border-radius: var(--radius);
+    padding: 10px;
+    background-color: var(--highlight-color);
+}
+
+/* تخصيص الأعمدة في الجدول */
+#dataTable th, td {
+    text-align: left;
+    background-color: transparent;
+    color: var(--text-color);
+    width: var(--width);
+    font-size: var(--size);
+}
+th {
+    font-weight: var(--weight);
+}
+
+/* شريط لاحق الصفوف في الجدول */
+#tableBody tr::before {
+    position: absolute;
+    content: '';
+    width: var(--width);
+    height: 3px;
+    background-color: var(--highlight-color);
+    bottom: 0;
+}
+
+/* عنصر مؤشر السطر */
+.lnt {
+    position: absolute;
+    z-index: 99;
+    margin-left: 20px;
+    top: 30px;
+}
+.lnt2 {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-color);
+    color: var(--fff-color);
+    border-radius: var(--width);
+    transform: scale(.9);
+}
+.lnt2::before {
+    position: absolute;
+    content: "\f107";
+    color: var(--primary-color);
+    font-family: fontAwesome;
+    bottom: -13px;
+    left: 21%;
+}
+
+/* مربع الأزرار النهائية */
+.boxBtnF {
+    display: none;
+    gap: 15px;
+    position: relative;
+    width: var(--width);
+    border-radius: var(--radius);
+    background-color: rgba(0, 0, 0, 0.021);
+    padding: 5px;
+}
+.box1btnF {
+    display: grid;
+    gap: 10px;
+}
+
+/* زر التعديل والحذف */
+.deleteButton0 {
+    display: none;
+}
+.deleteButton1, .editButton0, .editButton1 {
+    padding: 5px;
+    width: 63px;
+    height: 35px;
+    background-color: var(--primary-color);
+    border: solid 2px var(--background-color);
+    transform: scale(.9);
+    font-size: 13px;
+}
+.editButton0, .editButton1 {
+    width: 48px;  
+}
+
+/* نص الأزرار النهائية */
+.textBtnF {
+    font-weight: var(--weight);
+    color: var(--text-color);
+    font-size: 15px;
+    padding: 4px 2px;
+}
+
+/* زر نهائي */
+.btnFinal {
+    height: 40px;
+}
+
+/* زر دائري */
+.btn2 {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    padding: 0 0;
+    border: solid 2px var(--bck-body);
+    outline: 3px solid transparent;
+    box-shadow: 1px 1px 1px var(--sha-do);
+}
+
+/* مربع الأزرار */
+.boxBtn {
+    display: none;
+}
+
+/* تعديل محرر */
+.Modified {
+    animation: optic .6s ease-in-out;
+}
+
+
+/* part 4 */
+
+/* //////////////part cherch////////////////// */
+/* تنسيق الصندوق العام */
+.box {
+    padding: 0px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* تنسيق عناصر الصورة */
+.imageContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 15px 0px;
+    transform: translateY(95px);
+}
+
+/* تنسيق الصندوق الخاص بالفاتورة */
+.boxFatora {
+    position: relative;
+}
+
+/* تنسيق العلامة التحقق ونصها */
+#boxVirifi, .spanVirifi {
+    gap: 10px;
+    border-radius: var(--radius);
+    background-color: var(--sha-do);
+    padding: 8px;
+}
+
+/* تنسيق النص في العلامة التحقق */
+.spanVirifi {
+    color: var(--fff-color);
+    padding: 8px 15px;
+    font-weight: var(--weight);
+    font-size: var(--size);
+}
+
+/* تنسيق نص التحقق من الفاتورة */
+.virifiFatora {
+    color: var(--fff-color);
+    font-size: var(--size);
+    font-weight: var(--weight);
+}
+
+/* تنسيق الروابط داخل العنصر <a> */
+a i {
+    color: var(--text-color);
+}
+
+/* تنسيق رأس الصفحة */
+.shHeader {
+    width: 100%;
+    gap: 5px;
+}
+
+/* تنسيق حقل البحث */
+.box_inpt2 {
+    width: 100%;
+    flex-direction: column;
+}
+
+/* تنسيق حقل البحث نفسه */
+.search {
+    width: 100%;
+    padding: 10px 35px 11px 12px;
+    background-color: var(--fff-color);
+    border: 2px solid transparent;
+}
+.search:focus{
+    border: 2px solid var(--primary-color);
+}
+
+/* تنسيق حقل البحث عند النشاط */
+.active_search {
+    display: none;
+}
+
+/* تنسيق النص الافتراضي في حقل البحث */
+.search::placeholder {
+    font-weight: var(--weight);
+    font-size: var(--size);
+}
+
+/* تنسيق الصورة */
+.boxImg {
+    position: relative;
+    background-color: var(--fff-color);
+    border-radius: var(--radius);
+    width: 100%;
+    height: 20%;
+    background-size: cover;
+    justify-content: center;
+    box-shadow: 2px 2px 1px var(--sha-do);
+    outline: 3px solid transparent;
+    padding:20px;
+}
+
+/* تنسيق الصورة في الفاتورة */
+.imgFatora {
+    overflow-x: auto;
+    width: 100%;
+    opacity: .9;
+    transform: scale(.8);
+}
+
+/* تنسيق الفهرس في الفاتورة */
+.idxFatora {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 20px;
+    color: var(--text-color);
+    font-weight: var(--weight);
+    font-size: var(--size);
+}
+
+/* صندوق عند عدم العثور على الفاتورة */
+.boxNotFond {
+    animation: optic .6s ease-in-out;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px;
+    gap: 15px;
+    width: 100%;
+    transform: translateY(90px);
+}
+
+/* أيقونة في حالة عدم العثور على الفاتورة */
+.boxIcon i {
+    font-size: 45px;
+    color: var(--primary-color);
+}
+
+/* نص في حالة عدم العثور على الفاتورة */
+.boxTextNotF {
+    font-weight: var(--weight);
+    color: var(--text-color);
+}
+
+/* زر لعرض مجموع الفاتورة */
+.btntotalFinalFatora {
+    position: absolute;
+    top: -25px;
+    background-color: var(--highlight-color);
+    padding: 3px 15px;
+    left: 15px;
+    border-radius: var(--radius) var(--radius) 0 0 ;
+}
+
+/* صندوق مجموع الفاتورة */
+.boxtotalFinalFatora {
+    position: fixed;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+    bottom: 5px;
+    background-color: var(--sha-do);
+    left: 5%;
+    padding:20px 15px;
+    border-radius: var(--radius);
+    border: 3px solid var(--highlight-color);
+    transform: translateY(438px);
+    box-shadow: 3px 3px 10px var(--sha-do);
+    backdrop-filter: blur(5px);
+}
+
+/* عنصر داخل صندوق مجموع الفاتورة */
+.BxtotalFinalFatora {
+    position: relative;
+    padding: 15px;
+    background-color: var(--sha-do);
+    border-radius: 30px;
+    margin: auto;
+    width: 80%;
+    justify-content: center;
+    box-shadow: 1px 1px 1px var(--sha-do);
+}
+
+/* نص مجموع الفاتورة */
+.totalFinalFatora {
+    font-size: var(--size);
+    font-weight: var(--weight);
+    color: var(--text-color);
+}
+
+/* أيقونة في صندوق مجموع الفاتورة */
+.icnTotalFinalFatora {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-color: var(--primary-color);
+    border-radius: 100%;
+    left: 5px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.034);
+}
+
+/* نص في أيقونة صندوق مجموع الفاتورة */
+.icnTotalFinalFatora i {
+    color: var(--fff-color);
+}
+/* //////////////////////////////// */
+
+/* زر التحميل */
+.onlodBtn {
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-left: 2px solid #00000017;
+    border-top: 2px solid var(--fff-color);
+    border-right: 2px solid #00000017;
+    border-bottom: 2px solid #00000017;
+    border-radius: var(--radius2);
+    animation: ihshs .8s infinite linear;
+}
+
+/* زر العودة للأعلى */
+.scrlTop {
+    display: none;
+    position: fixed;
+    bottom: 15px;
+    place-content: center;
+    background-color: var(--highlight-color);
+    color: var(--text-color);
+    left: 100%;
+    margin-left: -45px;
+}
+
+/* تفاعل زر العودة للأعلى عند التحويم عليه */
+.scrlTop:hover {
+    outline-color: var(--text-color);
+}
+
+/* عرض زر العودة للأعلى عند الضرورة */
+.active_top {
+    display: grid;
+    animation: optic .6s ease-in-out;
+}
+
+/* عناصر نشطة */
+/* عناصر مخفية */
+.active_date {
+    display: none;
+}
+
+/* إظهار عناصر نصية */
+.active_remove_txt_in {
+    display: grid;
+}
+
+/* إظهار الجدول بتأثير */
+.active_table {
+    display: grid;
+    animation: optic .6s ease-in-out;
+}
+
+/* إظهار الأزرار داخل الجدول */
+.active_table_btn {
+    display: flex;
+    gap: 5px;
+}
+
+/* تدوير زر العرض */
+.active_btnSh {
+    transform: rotate(180deg);
+}
+
+/* تعطيل الزر */
+.active_button {
+    opacity: .7;
+    cursor: no-drop;
+}
+
+/* تضييم الصفوف المفعلة */
+.active_tr_edit {
+   opacity: .3;
+}
+
+/* تحديث موقع عناصر الجدول */
+.active_BxtotalFinalFatora {
+    transform: translateY(3px);
+}
+
+/* عنصر نشط */
+.active_set { 
+    display: none;
+}
+
+.active_purchase{
+    background-color: var(--purchase);
+    
+}
+.active_not_purchase{
+    background-color: var(--not_not_purchase);
+}
+
+/* تأثير الظهور */
+@keyframes optic {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* تأثير الدوران */
+@keyframes ihshs {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }  
+}
+
+/* تأثير التحريك */
+@keyframes chrche {
+    0% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(0);
+    }  
+}
+.in{
+    color: var(--fff-color);
+}
+  
+.inf{
+    background-color: var(--primary-color);
+ }
+
+
+
+.nameFatora2 {
+    position: absolute;
+    width: 100.1%;
+    padding: 8px;
+    background-color: var(--fff-color);
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.163);
+    border-radius: var(--radius);
+    left: 3.5px;
+    top: 47px;
+    gap: 10px;
+    display: none;
+    flex-direction: column;
+    z-index: 999;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+
+.active_nameFatora2{
+    display: flex;
+    flex-direction: column;
+}
+.nameFatora2 span{
+    display: block;
+    padding: 10px;
+    border-radius: var(--radius);
+    font-size: var(--size);
+    font-weight: var(--weight);
+}
+.nameFatora2 span:hover{
+    background-color: var(--primary-color);
+    color: var(--fff-color);
+}
+
+.boxImg:hover::before{
+   content: "\f06e";
+   color: var(--primary-color);
+   font-family: fontAwesome;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.055);
+   z-index: 1;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 25px;
+}
+
+.active_img{
+    position: relative;
+    top: -25px;
+}
+
+.box_erore{
+    width: 100%;
+    padding: 5px;
+    position: absolute;
+    text-align: center;
+    opacity: 0;
+    bottom: 80px;
+    
+}
+.active_box_erore{
+    animation: erore 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.text_erore{
+    padding: 10px 20px;
+    background-color: var(--text-color);
+    border-radius: 25px;
+    box-shadow: 1px 1px 2px var(--sha-do);
+    color: var(--fff-color);
+    font-size: var(--size);
+    font-weight: var(--weight);
+}
+@keyframes erore {
+    0%{
+       opacity: 0;
+       bottom: 80px;
+    }
+    100%{
+        bottom: 100px;
+        opacity: 1; 
+    }
+}
+.remove_name{
+    display: none;
+    padding:11px 25px;
+    font-size: var(--size);
+    font-weight: var(--weight);
+    background-color: var(--primary-color);
+    color: var(--fff-color);
+    border-radius: var(--radius);
+    box-shadow: 1px 1px 1px var(--sha-do);
+    animation: optic .6s ease-in-out;
+}
+.boxThisData{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   gap: 50px;
+   padding:50px;
+   background-color: var(--sha-do);
+   border-radius: var(--radius);
+   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.038);
+}
+.box_text_click{
+    justify-content: center;
+    width: 50%;
+}
+.box_text_click h2{
+    color: var(--text-color);
+}
+.box_text_click span {
+    font-weight: var(--weight);
+    font-size: 16px;
+    color: var(--text-color);
+}
+.box_img_click{
+    justify-content: center;
+    background-size: cover;
+    width: 50%;
+}
+.box_img_click img{
+    width: 30%;
+    height: 30%;
+}
+.active_boxThisData{
+    display: none;
+}
+@media only screen and (max-width: 1200px) {
+    .boxThisData {
+      flex-direction: column;
+    }
+    .box_text_click{
+        width: 100%;
+    }
+    .box_img_click{
+        width: 100%;
+    }
+    .box_text_click{
+        font-size: 14px;
+    }
+    .box_text_click span {
+        font-size: var(--size);
+    }
+  }

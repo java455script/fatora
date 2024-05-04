@@ -1,0 +1,75 @@
+html,body{
+   direction: rtl;
+}
+/* تنسيق قائمة التنقل */
+.nav {
+    left: 100%;
+    margin-left: 0px;
+}
+
+.active_nav {
+    margin-left: -194px;
+}
+
+/* تنسيق العناصر في الهيدر */
+.barHeader {
+    left: 10px;
+}
+
+/* تحديد الأسلوب النشط للرمز */
+.active_bar{
+    left: -192px;
+}
+/* حقل الإدخال */
+.ipt_txt{
+    padding: 10px 12px 10px 35px;
+}
+
+/* اسم input */
+.label_ipt {
+    left: 100%;
+    margin-left: -48px;
+}
+.prT{
+    margin-left: -64px; 
+}
+
+/* زر حذف النص */
+.remove_txt_in {
+    left: 10px;
+    margin-left: 0;
+}
+
+/* تخصيص الأعمدة في الجدول */
+#dataTable th, td {
+    text-align: right;
+}
+
+/* عنصر مؤشر السطر */
+.lnt {
+    position: absolute;
+    z-index: 99;
+    margin-left: 20px;
+    top: 30px;
+} 
+.lnt2 {
+    left: -40px;
+}
+.deleteButton1{
+    width: 50px
+}
+.editButton0, .editButton1{
+    width: 56px
+}
+.idxFatora{
+    left: 100%;
+    margin-left: -45px;
+}
+/* زر العودة للأعلى */
+.scrlTop {
+    left: 15px;
+    margin-left: 0;
+}
+.chrRemove{
+    left: 19px;
+}
